@@ -1,0 +1,15 @@
+.table{
+    .status{
+        padding: 5px;
+        border-radius: 5px;
+        
+        &.Approved{
+            color:green;
+            background-color: rgba(0, 255, 0, 0.308);
+        }
+        &.Pending{
+            color:goldenrod;
+            background-color:rgba(238, 255, 0, 0.123) ;
+        }
+    }
+}

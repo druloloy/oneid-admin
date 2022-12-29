@@ -1,0 +1,128 @@
+.update-form-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:2rem;
+
+    -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3); 
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    padding: 1rem;
+    
+
+    .update-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        .multiple{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 1rem;
+
+            .input-container{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: .5rem;
+
+                input[type=text], input[type=password], input[type=date]{
+                    width: 80%;
+                    padding: 5px;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                    background-color: transparent;
+                    color: rgb(42, 42, 42);
+                }
+                select{
+                    width: 100%;
+                    padding: 5px;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                }
+            }
+        }
+
+        .single{
+            width: 100%;
+            .input-container{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: .5rem;
+
+                input[type=text], input[type=password], input[type=date]{
+                    width: 80%;
+                    padding: 5px;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                    background-color: transparent;
+                    color: rgb(42, 42, 42);
+                }
+                button {
+                    background-color: transparent;
+                    border: 1px solid rgb(42, 42, 42);
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    font-size: 1rem;
+        
+                    transition: all 300ms ease-in-out;
+        
+                    &:hover{
+                        background-color: rgb(42, 42, 42);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .button-container{
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap:1rem;
+        
+        button{
+            background-color: transparent;
+            border: 1px solid rgb(42, 42, 42);
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 1rem;
+
+            transition: all 300ms ease-in-out;
+
+            &:hover{
+                background-color: rgb(42, 42, 42);
+                color: white;
+            }
+        }
+
+        .submit{
+            border: none;
+            background-color: rgb(59, 206, 59);
+            color: white;
+            &:hover{
+                border: none;
+                background-color: rgb(59, 206, 59);
+                filter: brightness(1.2);
+            }
+        }
+    }
+}
