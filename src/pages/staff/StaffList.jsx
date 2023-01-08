@@ -4,7 +4,8 @@ import StaffDatatable from "../../components/staffDatatable/StaffDatatable";
 import useRedirect from "../../effects/useRedirect";
 
 function StaffList(){
-    useRedirect();
+    document.title = "Staffs";
+    // useRedirect();
     return(
         <div className="list">
             <Sidebar/>

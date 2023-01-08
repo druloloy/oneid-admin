@@ -11,6 +11,8 @@ import moment from 'moment/moment';
 import useRedirect from '../../effects/useRedirect';
 function Home(){
 
+    document.title = "Dashboard";
+
     const [range, setRange] = useState(2);
     const [dateRange, setDateRange] = useState({
         start: moment().subtract(6, 'month').startOf('month').format('YYYY-MM-DD'),
@@ -20,7 +22,7 @@ function Home(){
     const [trendDiseases, setTrendDiseases] = useState([]);
     const [queueHistory, setQueueHistory] = useState([]);
 
-    useRedirect();
+    // useRedirect();
 
     useEffect(() => {
         const fetchData = async () => {

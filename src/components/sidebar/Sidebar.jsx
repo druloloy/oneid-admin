@@ -2,23 +2,23 @@ import React, { useContext } from "react";
 import './sidebar.scss';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from '@mui/icons-material/Person';
-import StorageIcon from '@mui/icons-material/Storage';
-import SettingsIcon from '@mui/icons-material/Settings';
-import BookIcon from '@mui/icons-material/Book';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
-import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import LogoutIcon from '@mui/icons-material/Logout';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import {Link} from 'react-router-dom'
+import ScheduleIcon from '@mui/icons-material/Schedule';
+import LockIcon from '@mui/icons-material/Lock';
+
+import {Link, useNavigate} from 'react-router-dom'
 import { DarkModeContext } from "../../context/darkModeContext";
 import UserService from "../../services/UserService";
 import { UserAuthContext } from "../../context/userAuthContext";
 function Sidebar(){
+    const navigate = useNavigate();
     const { dispatch} = useContext(DarkModeContext);
     const { dispatch: userDispatch} = useContext(UserAuthContext); 
     const handleLogout = async () => {
         await UserService.logoutUser().then((res) => {
             userDispatch({type: "LOGGED_OFF"});
+            navigate("/");
         })
     }
     return(
@@ -46,34 +46,32 @@ function Sidebar(){
                         <span>Staffs</span>
                     </li>
                 </Link>
-                {/* <Link to="/staff" style={{textDecoration: "none"}}>
-                    <li>
-                        <AdminPanelSettingsIcon className="icon"/>
-                        <span>Admins</span>
-                    </li>
-                </Link> */}
                 <Link to="/patient" style={{textDecoration: "none"}}>
                     <li>
                         <PersonIcon className="icon"/>
                         <span>Patients</span>
                     </li>
                 </Link>
-                      <p className="title">SYSTEM</p>
+                    <p className="title">SYSTEM</p>
+                <Link to="/schedule" style={{textDecoration: "none"}}>
                     <li>
-                        <SettingsIcon className="icon"/>
-                        <span>Settings</span>
+                        <ScheduleIcon className="icon"/>
+                        <span>Schedule</span>
                     </li>
-                        <p className="title">Admin</p>
-                    {/* <li>
-                        <AccountCircleIcon className="icon"/>
-                        <span>Profile</span>
-                    </li> */}
-                    <li>
-                        <Link to="/" onClick={handleLogout} style={{textDecoration: "none"}}>
+                </Link>
+                <p className="title">Admin</p>
+                    <Link to="/managepassword" style={{textDecoration: "none"}}>
+                        <li>
+                            <LockIcon className="icon"/>
+                            <span>Manage Password</span>
+                        </li>
+                    </Link>
+                     <div onClick={handleLogout} style={{textDecoration: "none"}}>
+                        <li>
                             <LogoutIcon className="icon"/>
                             <span>Logout</span>
-                        </Link>
-                    </li>
+                        </li>
+                    </div>
                 </ul>
             </div>
             <div className="bottom">

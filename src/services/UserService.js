@@ -86,6 +86,38 @@ const removeStaff = async (id) => {
     const response = await Api.delete(`staff/delete?${q}`);
     return response.data;
 }
+
+const getAllSchedule = async () => {
+    const response = await Api.get(`schedule`);
+    return response.data;
+}
+
+const updateActivities = async (data) => {
+    const response = await Api.put(`schedule/activities`, data);
+    return response.data;
+}
+
+const removeSchedule = async (data) => {
+    const response = await Api.delete(`schedule`, {data});
+    return response.data;
+}
+
+const addSchedule = async (data) => {
+    const response = await Api.post(`schedule`, data);
+    return response.data;
+}
+
+const updateTime = async (data) => {
+    // startTime, endTime
+    const response = await Api.put(`schedule/time`, data);
+    return response.data;
+}
+
+const updateAdminPassword = async (data) => {
+    const response = await Api.put(`password`, data);
+    return response.data;
+}
+
 const UserService = {
     loginUser,
     logoutUser,
@@ -102,7 +134,13 @@ const UserService = {
     removeStaff,
     getPatient,
     updatePatient,
-    deletePatient
+    deletePatient,
+    getAllSchedule,
+    updateActivities,
+    removeSchedule,
+    addSchedule,
+    updateTime,
+    updateAdminPassword
 }
 
 export default UserService;

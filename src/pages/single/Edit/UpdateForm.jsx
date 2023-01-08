@@ -153,10 +153,10 @@ const form = {
         required: true,
       },
         street: {
-        title: 'Street',
-        type: 'text',
-        required: true,
-      },
+          title: 'Street',
+          type: 'text',
+          required: true,
+        },
       barangay: {
         title: 'Barangay',
         type: 'text',

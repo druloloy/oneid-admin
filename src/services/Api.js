@@ -1,5 +1,8 @@
 import axios from 'axios';
-export const baseURL = 'http://localhost:5000/api/v1/';
+export const baseURL =
+	process.env.NODE_ENV === 'development'
+		? process.env.REACT_APP_DEV_URL
+		: process.env.REACT_APP_PROD_URL;
 const defaultPath = 'admin/';
 
 axios.defaults.withCredentials = true;

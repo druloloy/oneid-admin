@@ -54,11 +54,8 @@ const PatientDatatable = () => {
 
   return (
     <div className="datatable">
-          <div className="datatableTitle">
-            Patients
-            <Link to="/patient/new" className="link">
-              Add New
-            </Link>
+        <div className="datatableTitle">
+          Patients
         </div>
          <DataGrid
          className="datagrid"

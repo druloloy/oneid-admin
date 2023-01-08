@@ -6,7 +6,8 @@ import UserService from "../../services/UserService";
 import useRedirect from "../../effects/useRedirect";
 
 const New = ({inputs,title}) => {
-    useRedirect();
+    document.title = title;
+    // useRedirect();
     
     const [details, setDetails] = useState({
         firstName: "",

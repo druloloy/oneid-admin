@@ -147,13 +147,14 @@ const patientDataModel = [
 ]
 
 function Single({type}){
+    document.title = type === 'patient' ? 'Patient' : 'Staff';
     const [data, setData] = useState({});
     const [formData, setFormData] = useState(type==='patient' ? patientDataModel : staffDataModel);
     const [showUpdateForm, setShowUpdateForm] = useState(false);
     const [updateData, setUpdateData] = useState({});
 
     const {id} = useParams();
-    useRedirect();
+    // useRedirect();
 
     const loadFormData = (values) => {
         setFormData((prev) => {

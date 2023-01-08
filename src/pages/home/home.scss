@@ -1,8 +1,10 @@
 .home{
     display: flex;
-    
+    height: 100%;
+
     .homeContainer{
-        flex:6;
+        flex: 2;
+        height: 150vh;
 
         .widgets, .charts {
             display: flex;

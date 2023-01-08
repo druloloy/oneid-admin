@@ -8,6 +8,7 @@ import TokenService from '../../services/TokenService';
 
 
 function Login(){
+    document.title = "Login";
     const {_, dispatch} = useContext(UserAuthContext);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
