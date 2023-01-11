@@ -25,7 +25,7 @@ function Sidebar(){
         <div className="sidebar">
             <div className="top">
                 <Link to="/dashboard" style={{textDecoration: "none"}}>
-                     <span className="logo">OneID Health Record</span>
+                     <span className="logo">OneID Health Card System</span>
                 </Link>          
             </div>
             <hr/>
