@@ -1,11 +1,10 @@
-import {useState, useEffect, useContext} from 'react';
+import {useState, useContext} from 'react';
 import UserService from "../../services/UserService";
 import { UserAuthContext } from '../../context/userAuthContext';
 import { useNavigate } from 'react-router-dom';
 import useRedirect from '../../effects/useRedirect';
 import "./login.scss";
-import TokenService from '../../services/TokenService';
-
+import Logo from '../../assets/logo/compressed/oneid_256x256.png'
 
 function Login(){
     document.title = "Login";
@@ -26,8 +25,8 @@ function Login(){
     return(
         <div className="login-container">
             <div className="login">
-                <img src='/images/compressed/oneid_128x128.png' alt="logo" loading="lazy"/>
-                <h1>OneID Health Record</h1>
+                <img src={Logo} alt="logo" loading="lazy"/>
+                <h1>OneID Health Card System</h1>
                 <h2>Admin</h2>
 
                 <form onSubmit={handleSubmit}>
