@@ -3,7 +3,7 @@ import Sidebar from '../../components/sidebar/Sidebar'
 import UserService from '../../services/UserService'
 import './managePassword.scss'
 function ManagePassword() {
-document.title = 'Manage Password'
+document.title = 'Manage Password | OneID'
   const [showOldPassword, setShowOldPassword] = React.useState(false)
   const [showNewPassword, setShowNewPassword] = React.useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false)

@@ -11,7 +11,7 @@ import moment from 'moment/moment';
 import useRedirect from '../../effects/useRedirect';
 function Home(){
 
-    document.title = "Dashboard";
+    document.title = "Dashboard | OneID";
 
     const [range, setRange] = useState(2);
     const [dateRange, setDateRange] = useState({

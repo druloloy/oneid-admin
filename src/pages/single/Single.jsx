@@ -147,7 +147,7 @@ const patientDataModel = [
 ]
 
 function Single({type}){
-    document.title = type === 'patient' ? 'Patient' : 'Staff';
+    document.title = type === 'patient' ? 'Patient | OneID' : 'Staff | OneID';
     const [data, setData] = useState({});
     const [formData, setFormData] = useState(type==='patient' ? patientDataModel : staffDataModel);
     const [showUpdateForm, setShowUpdateForm] = useState(false);

@@ -7,7 +7,7 @@ import "./login.scss";
 import Logo from '../../assets/logo/compressed/oneid_256x256.png'
 
 function Login(){
-    document.title = "Login";
+    document.title = "Login | OneID";
     const {_, dispatch} = useContext(UserAuthContext);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");

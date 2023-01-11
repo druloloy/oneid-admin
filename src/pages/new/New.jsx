@@ -6,7 +6,7 @@ import UserService from "../../services/UserService";
 import useRedirect from "../../effects/useRedirect";
 
 const New = ({inputs,title}) => {
-    document.title = title;
+    document.title = title + " | OneID";
     // useRedirect();
     
     const [details, setDetails] = useState({

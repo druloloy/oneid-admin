@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import SVG from '../../assets/misc/undraw_void_-3-ggu.svg';
 import './page404.scss';
 function Page404() {
+	document.title = 'Uh oh! | OneID';
 	return (
 		<div className="container">
 			<div className="content">

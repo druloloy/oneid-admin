@@ -8,7 +8,7 @@ import Add from './Add/Add'
 import UserService from '../../services/UserService';
 
 function Schedule() {
-  document.title = "Manage Schedules";
+  document.title = "Manage Schedules | OneID";
   const daysRef = React.useRef([]);
   const [open, setOpen] = React.useState(false);
   const [updateType , setUpdateType] = React.useState('monday');

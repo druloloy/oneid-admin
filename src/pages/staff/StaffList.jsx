@@ -1,10 +1,9 @@
 import "./list.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import StaffDatatable from "../../components/staffDatatable/StaffDatatable";
-import useRedirect from "../../effects/useRedirect";
 
 function StaffList(){
-    document.title = "Staffs";
+    document.title = "Staffs | OneID";
     // useRedirect();
     return(
         <div className="list">
