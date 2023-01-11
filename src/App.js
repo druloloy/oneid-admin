@@ -21,28 +21,29 @@ function App() {
   return (
     <div className={JSON.parse(darkMode) ? "app dark" : "app"}>
       <Router>
-        <Routes>
-          <Route element={<PublicRoute />}>
-            <Route exact path="/" element={<Login/>}/>
-          </Route>
-        </Routes>
-        <Routes>
-          <Route element={<PrivateRoute />}>
-            <Route exact path="/dashboard" element={<Home/>}/>
+        <Routes path="/">
 
-            <Route exact path="/staff" element={<StaffList/>}/>
+          <Route element={<PublicRoute />}>
+            <Route exact index element={<Login/>}/>
+          </Route>
+
+          <Route element={<PrivateRoute />}>
+            <Route path="/dashboard" element={<Home/>}/>
+
+            <Route path="/staff" element={<StaffList/>}/>
             <Route path='/staff/:id' element={<Single type="staff" />}/>
             <Route path='/staff/new' element={<New inputs={staffInputs} title="Add New Staff"/>}/>
 
  
-            <Route exact path="/patient" element={<PatientList/>}/>
+            <Route path="/patient" element={<PatientList/>}/>
             <Route path='/patient/:id' element={<Single type="patient" />}/>
             
 
-            <Route exact path='/schedule' element={<Schedule />}/>
-            <Route exact path='/managepassword' element={<ManagePassword />}/>
+            <Route path='/schedule' element={<Schedule />}/>
+            <Route path='/managepassword' element={<ManagePassword />}/>
           </Route>
-          <Route path="/*" element={<Page404 />}/>
+
+          <Route path="*" element={<Page404 />}/>
         </Routes>
       </Router>
     </div>
